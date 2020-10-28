@@ -34,6 +34,7 @@
     "@ionic/angular": "^5.0.0",
     "@ionic/pwa-elements": "^3.0.1",
     "@ionic/storage": "^2.3.1",
+    "br-mask": "0.0.10",
     "chart.js": "^2.9.4",
     "chartjs-plugin-zoom": "^0.7.7",
     "cordova-plugin-camera": "^5.0.0",

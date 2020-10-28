@@ -217,6 +217,63 @@ export class HelperService {
   }
 
   /**
+   * Converte numero em string monetário para edição
+   * author Silvio Watakabe <silvio@tcmed.com.br>
+   * @since 23-07-2020
+   * @version 1.0
+   * @param valor any
+   * @return resul number
+   */
+  numberToCurrency(valor: any) {
+    // Troca todas os . por ,
+    valor = valor.toString();
+    valor =  valor.indexOf('.') > 1 ? valor.replace('.', ',') : valor + ',00';
+    const array = valor.split(',', 2);
+    if (array.length === 2) {
+      valor = array[1].length < 2 ? valor + '0' : valor;
+    }
+
+    return valor;
+  }
+
+  /**
+   * Converte decimal(String) em valor de porcentagem(numero) para o Sqlite
+   * author Silvio Watakabe <silvio@tcmed.com.br>
+   * @since 28-10-2020
+   * @version 1.0
+   * @param valor any aceita string como R$00,00 ou 00,00
+   * @return resul number
+   */
+  convertDecimalPorcentagem(valor: any) {
+    // Remove todos os .
+    valor = valor.replace(/\./g, '');
+    // Remove R$
+    valor = valor.replace('R$', '');
+    // Troca todas as , por .
+    valor = valor.replace(',', '.');
+    // Converte para float
+    valor = parseFloat(valor) / 100;
+    return valor;
+  }
+
+  /**
+   * Converte numero Porcentagem em string decimal para edição
+   * author Silvio Watakabe <silvio@tcmed.com.br>
+   * @since 28-10-2020
+   * @version 1.0
+   * @param valor any aceita string como R$00,00 ou 00,00
+   * @return resul string
+   */
+  convertPorcentagemDecimal(valor: any, decimais) {
+    valor = valor * 100;
+    valor = (parseFloat(valor).toFixed(decimais));    
+    // Troca todas as , por .
+    valor = valor.toString().replace('.', ',');
+    
+    return valor;
+  }
+
+  /**
    * Calcula Idade conforme data de nascimento
    * author Silvio Watakabe <silvio@tcmed.com.br>
    * @since 23-07-2020

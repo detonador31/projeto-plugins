@@ -1,12 +1,12 @@
 export class Mascara {
     // tslint:disable: variable-name
     id: number;
-    real: number;
-    percent: number;
-    data: Date;
+    real: any;
+    percent: any;
+    data: any;
     sqliteDate: any;
-    fixo: number;
-    celular: number;
+    fixo: string;
+    celular: string;
 }
 
 export class MascaraArray {

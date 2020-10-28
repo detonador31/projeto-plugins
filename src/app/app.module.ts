@@ -20,9 +20,11 @@ import { IonicStorageModule } from '@ionic/storage';
 // Dependências para o SQlite
 import { SQLite } from '@ionic-native/sqlite/ngx';
 import { SQLitePorter } from '@ionic-native/sqlite-porter/ngx';
-import { DatePipe, CurrencyPipe  } from '@angular/common';
 
 // Tudo isso pra usar valor monetário em reais!
+import { BrMaskerModule } from 'br-mask';
+import { DatePipe, CurrencyPipe, PercentPipe  } from '@angular/common';
+
 import { LOCALE_ID } from '@angular/core';
 import localePt from '@angular/common/locales/pt';
 import {registerLocaleData} from '@angular/common';
@@ -32,8 +34,6 @@ registerLocaleData(localePt, 'pt');
 import 'chartjs-plugin-zoom';
 
 // ngx-mask
-import { NgxMaskModule, IConfig } from 'ngx-mask';
-export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
 @NgModule({
   declarations: [AppComponent],
@@ -43,21 +43,23 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
             IonicStorageModule.forRoot(),
             AppRoutingModule,
             HttpClientModule,
-            NgxMaskModule.forRoot()
            ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    { provide: LOCALE_ID, useValue: 'pt'},
     Camera,
     File,
     WebView,
     FilePath,
     SQLite,
     SQLitePorter,
+
     DatePipe,
     CurrencyPipe,
-    {provide: LOCALE_ID, useValue: 'pt'},
+    PercentPipe,
+    BrMaskerModule
   ],
   bootstrap: [AppComponent]
 })

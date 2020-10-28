@@ -9,6 +9,8 @@ import { MascarasPageRoutingModule } from './mascaras-routing.module';
 import { MascarasPage } from './mascaras.page';
 
 import { NgxMaskModule } from 'ngx-mask';
+// Mascara para campos padrão PT-BR
+import { BrMaskerModule } from 'br-mask';
 
 
 @NgModule({
@@ -17,7 +19,8 @@ import { NgxMaskModule } from 'ngx-mask';
     FormsModule,
     IonicModule,
     MascarasPageRoutingModule,
-    NgxMaskModule,
+    NgxMaskModule.forChild(),
+    BrMaskerModule
   ],
   declarations: [MascarasPage],
 })
