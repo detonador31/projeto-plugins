@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Teste de Câmera1
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <br />
+<!--   <ion-title>
+    Armazenadas em Storage e gravada em Array
+  </ion-title>
+  <ion-row *ngFor="let item of images">
+    <ion-col size="6">
+      <img [src]="item.image" width="100%">
+    </ion-col>
+    <ion-col size="6">
+      <img [src]="item.image2" width="100%">
+    </ion-col>
+  </ion-row>
+  <ion-title>
+    <h6 *ngIf="images.length === 0">Tire Fotos para aparecer aqui temporariamente</h6>
+  </ion-title>  
+  <br />
+  <br /> -->
+  <ion-title>
+    Lidas do SQLITE
+  </ion-title>
+  <ion-row>
+    <ion-col size="6" *ngFor="let item of bancoImages">
+      <img [src]="item.image" width="100%">
+    </ion-col>
+  </ion-row>
+  <ion-title>
+    <h6 *ngIf="bancoImages.length === 0">Não Há imagens no Banco de dados!</h6>
+  </ion-title>
+
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="takePicture()">
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

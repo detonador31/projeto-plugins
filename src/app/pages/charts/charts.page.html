@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Charts</ion-title>
+    <ion-buttons slot="start">
+      <ion-button size="large" (click)="backPage()">
+        <ion-icon name="arrow-back-outline" size="large" ></ion-icon>&nbsp; Voltar
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="stock" placeholder="AAPL, MSFT..."></ion-input>
+    <ion-button slot="end" expand="full" (click)="getData()" [disabled]="stock == ''">
+      <ion-icon slot="start" name="search"></ion-icon>
+      Search
+    </ion-button>
+  </ion-item>
+
+  <canvas baseChart 
+  [datasets]="chartData" 
+  [labels]="chartLabels" 
+  [options]="chartOptions" 
+  [colors]="chartColors"
+  [legend]="showLegend" 
+  [chartType]="chartType">
+  </canvas>
+</ion-content>
