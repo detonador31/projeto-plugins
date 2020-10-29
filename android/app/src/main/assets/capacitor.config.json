@@ -1,16 +1,20 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "proj_plugin_teste",
+  "appId": "com.ionic.projetoplugins",
+  "appName": "projeto_plugins",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
   "plugins": {
     "SplashScreen": {
       "launchShowDuration": 0
+    },
+    "PushNotifications": {
+      "presentationOptions": [
+        "badge",
+        "sound",
+        "alert"
+      ]
     }
   },
-  "cordova": {},
-  "server": {
-    "url": "http://192.168.15.19:8100"
-  }
+  "cordova": {}
 }

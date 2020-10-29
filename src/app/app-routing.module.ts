@@ -12,6 +12,10 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'home/:id',
+    loadChildren: () => import('./pages/push-notification/push-notification.module').then( m => m.PushNotificationPageModule)
+  },    
+  {
     path: 'camera1',
     loadChildren: () => import('./pages/camera1/camera1.module').then( m => m.Camera1PageModule)
   },
@@ -27,6 +31,11 @@ const routes: Routes = [
     path: 'mascaras',
     loadChildren: () => import('./pages/mascaras/mascaras.module').then( m => m.MascarasPageModule)
   },
+  {
+    path: 'push',
+    loadChildren: () => import('./pages/push-notification/push-notification.module').then( m => m.PushNotificationPageModule)
+  },
+
 ];
 
 @NgModule({
