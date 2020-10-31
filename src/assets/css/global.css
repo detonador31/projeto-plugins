@@ -369,3 +369,14 @@ ion-radio-group {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
+
+.finanSelect ion-select {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    height: 50px;
+    margin: auto;
+    border: 1px solid #2674ce;
+    padding-bottom: 10px;
+    width: 97%;
+    background-color: #ffffff;
+}

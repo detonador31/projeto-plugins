@@ -13,7 +13,7 @@
 
   <ion-item>
     <ion-input type="text" [(ngModel)]="stock" placeholder="AAPL, MSFT..."></ion-input>
-    <ion-button slot="end" expand="full" (click)="getData()" [disabled]="stock == ''">
+    <ion-button slot="end" expand="full" (click)="getData(stock)" [disabled]="stock == ''">
       <ion-icon slot="start" name="search"></ion-icon>
       Search
     </ion-button>
@@ -23,8 +23,46 @@
   [datasets]="chartData" 
   [labels]="chartLabels" 
   [options]="chartOptions" 
-  [colors]="chartColors"
   [legend]="showLegend" 
   [chartType]="chartType">
   </canvas>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Settings</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Line chart?</ion-label>
+        <ion-toggle (ionChange)="typeChanged($event)" checked></ion-toggle>
+      </ion-item>
+<!--       <ion-item>
+        <ion-label>Show legend?</ion-label>
+        <ion-toggle [(ngModel)]="showLegend"></ion-toggle>
+      </ion-item> -->
+<!--       <ion-item>
+        <ion-label>Background color</ion-label>
+        <ion-input type="text" [(ngModel)]="chartColors[0].backgroundColor"></ion-input>
+      </ion-item> -->
+    </ion-card-content>
+  </ion-card>  
+
+  <canvas baseChart 
+  [datasets]="chart2Data" 
+  [labels]="chart2Labels" 
+  [legend]="showLegend" 
+  [chartType]="chart2Type">
+  </canvas>  
+
+  <ion-row>
+    <ion-col size="12">
+      <ion-label class="labelTop">Tipo de Gráfico</ion-label>
+    </ion-col>
+    <ion-col class="finanSelect">
+        <ion-select name="chart2Type" placeholder="Escolha o Tipo de Gráfico" [(ngModel)]="chart2Type" 
+          interface="action-sheet">
+          <ion-select-option *ngFor="let item of tipoChart" [value]="item.tipo">{{ item.descri }}</ion-select-option>
+        </ion-select>
+    </ion-col>
+  </ion-row>    
 </ion-content>
