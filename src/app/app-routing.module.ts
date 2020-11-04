@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'push',
     loadChildren: () => import('./pages/push-notification/push-notification.module').then( m => m.PushNotificationPageModule)
   },
+  {
+    path: 'scroll',
+    loadChildren: () => import('./pages/scroll/scroll.module').then( m => m.ScrollPageModule)
+  },
 
 ];
 

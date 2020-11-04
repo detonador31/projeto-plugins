@@ -216,7 +216,7 @@ export class HelperService {
     return valor;
   }
 
-  /**
+   /**
    * Converte numero em string monetário para edição
    * author Silvio Watakabe <silvio@tcmed.com.br>
    * @since 23-07-2020
@@ -227,7 +227,7 @@ export class HelperService {
   numberToCurrency(valor: any) {
     // Troca todas os . por ,
     valor = valor.toString();
-    valor =  valor.indexOf('.') > 1 ? valor.replace('.', ',') : valor + ',00';
+    valor =  valor.indexOf('.') > 0 ? valor.replace('.', ',') : valor + ',00';
     const array = valor.split(',', 2);
     if (array.length === 2) {
       valor = array[1].length < 2 ? valor + '0' : valor;
@@ -271,6 +271,13 @@ export class HelperService {
     valor = valor.toString().replace('.', ',');
     
     return valor;
+  }
+
+  arredondarPraCima(val: number, casas: number) {
+    const casasDecimais = Math.pow(10, casas);
+    var arrendondar = Math.round(val * casasDecimais);
+    var resul = Math.ceil(arrendondar)/casasDecimais;
+    return resul;
   }
 
   /**
