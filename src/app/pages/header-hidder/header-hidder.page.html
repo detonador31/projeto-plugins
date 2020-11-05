@@ -1,0 +1,19 @@
+<ion-header  #header translucent="true">
+  <ion-toolbar    translucent color="primary">
+    <ion-buttons slot="start">
+      <ion-button size="large" (click)="backPage()">
+        <ion-icon  name="arrow-back-outline" size="large" ></ion-icon>&nbsp; Voltar
+      </ion-button>
+    </ion-buttons>      
+    <ion-title>Teste de Hidden Header</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" scrollEvents="true" [appFadeHeader]="header">
+  <ion-img  src='./assets/img/tela.png' ></ion-img> 
+  <ion-list>
+    <ion-item *ngFor="let item of arr; let i = index;">
+      <ion-label>{{ item }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'scroll',
     loadChildren: () => import('./pages/scroll/scroll.module').then( m => m.ScrollPageModule)
   },
+  {
+    path: 'header-hidder',
+    loadChildren: () => import('./pages/header-hidder/header-hidder.module').then( m => m.HeaderHidderPageModule)
+  },
 
 ];
 

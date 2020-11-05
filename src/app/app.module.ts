@@ -32,11 +32,13 @@ registerLocaleData(localePt, 'pt');
 
 // Chats package
 import 'chartjs-plugin-zoom';
+import { HideHeaderDirective } from './directives/hide-header.directive';
+import { FadeHeaderDirective } from './directives/fade-header.directive';
 
 // ngx-mask
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, HideHeaderDirective, FadeHeaderDirective],
   entryComponents: [],
   imports: [BrowserModule,
             IonicModule.forRoot(),
