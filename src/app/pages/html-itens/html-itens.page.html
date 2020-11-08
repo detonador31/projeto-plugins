@@ -1,0 +1,385 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>html-itens</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-title>Badge para contagens</ion-title>
+  <ion-list>
+    <ion-list-header>Badges</ion-list-header>
+    <ion-item>
+      <ion-label>Followers</ion-label>
+      <ion-badge slot="end">22k</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Likes</ion-label>
+      <ion-badge color="secondary" slot="end">118k</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Stars</ion-label>
+      <ion-badge color="tertiary" slot="end">34k</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Completed</ion-label>
+      <ion-badge color="success" slot="end">80</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Warnings</ion-label>
+      <ion-badge color="warning" slot="end">70</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Notifications</ion-label>
+      <ion-badge color="danger" slot="end">1000</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Unread</ion-label>
+      <ion-badge color="light" slot="end">24</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Drafts</ion-label>
+      <ion-badge color="medium" slot="end">14</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Deleted</ion-label>
+      <ion-badge color="dark" slot="end">4</ion-badge>
+    </ion-item>
+  </ion-list>
+
+<br />
+  <ion-title>Botões</ion-title>
+<br />  
+  <section>
+    <header>Small Size</header>
+    <ion-button size="small">Default</ion-button>
+    <ion-button size="small" color="secondary">Secondary</ion-button>
+    <ion-button size="small" color="tertiary">Tertiary</ion-button>
+  </section>
+  <section>
+    <header>Default Size</header>
+    <ion-button color="success">Success</ion-button>
+    <ion-button color="warning">Warning</ion-button>
+    <ion-button color="danger">Danger</ion-button>
+  </section>
+  <section>
+    <header>Large Size</header>
+    <ion-button size="large" color="light">Light</ion-button>
+    <ion-button size="large" color="medium">Medium</ion-button>
+    <ion-button size="large" color="dark">Dark</ion-button>
+  </section>
+  <section>
+    <header>Block Width</header>
+    <ion-button expand="block">A block button</ion-button>
+  </section>
+
+  <section class="full-width">
+    <header>Full Width</header>
+    <ion-button expand="full" color="secondary">A full-width button</ion-button>
+  </section>
+
+
+
+
+  <br />
+  <ion-title>Checkboxs</ion-title>
+  <br /> 
+  <!-- Default Checkbox -->
+  <ion-list>
+    <ion-item>
+      <ion-label>Disabled Checkbox</ion-label>
+      <!-- Disabled Checkbox -->
+      <ion-checkbox disabled="true"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Checked Checkbox </ion-label>
+    <!-- Checked Checkbox -->
+    <ion-checkbox checked="true"></ion-checkbox>
+    </ion-item>
+    <!-- Checkbox Colors -->
+    <ion-title>Colors</ion-title>    
+    <ion-item>
+      <ion-label>primary</ion-label>
+    <ion-checkbox checked="true" color="primary"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>secondary</ion-label>      
+      <ion-checkbox checked="true" color="secondary"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>danger</ion-label>         
+      <ion-checkbox checked="true"color="danger"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>light</ion-label>           
+      <ion-checkbox checked="true" color="light"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>dark</ion-label>         
+      <ion-checkbox checked="true" color="dark"></ion-checkbox>
+    </ion-item>
+  </ion-list>  
+
+  <!-- Checkboxes in a List -->
+  <ion-list>
+    <ion-item *ngFor="let entry of form">
+      <ion-label>{{entry.val}}</ion-label>
+      <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+
+  <br />
+  <ion-title>Chips</ion-title>
+  <br /> 
+  <ion-list-header>Basic</ion-list-header>
+  <p>
+    <ion-chip>
+      <ion-label>Default</ion-label>
+    </ion-chip>
+    <ion-chip>
+      <ion-icon name="checkmark-circle"></ion-icon>
+      <ion-label>Icon</ion-label>
+    </ion-chip>
+    <ion-chip>
+      <ion-avatar>
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjYzVkYmZmIiBkPSJNMCAwaDUxMnY1MTJIMHoiLz48cGF0aCBkPSJNMjU2IDMwNGM2MS42IDAgMTEyLTUwLjQgMTEyLTExMlMzMTcuNiA4MCAyNTYgODBzLTExMiA1MC40LTExMiAxMTIgNTAuNCAxMTIgMTEyIDExMnptMCA0MGMtNzQuMiAwLTIyNCAzNy44LTIyNCAxMTJ2NTZoNDQ4di01NmMwLTc0LjItMTQ5LjgtMTEyLTIyNC0xMTJ6IiBmaWxsPSIjODJhZWZmIi8+PC9zdmc+" />
+      </ion-avatar>
+      <ion-label>Avatar</ion-label>
+    </ion-chip>
+  </p>
+
+  <ion-list-header>Colors</ion-list-header>
+  <p>
+    <ion-chip color="primary">
+      <ion-label>Primary</ion-label>
+    </ion-chip>
+    <ion-chip color="secondary">
+      <ion-label>Secondary</ion-label>
+    </ion-chip>
+    <ion-chip color="tertiary">
+      <ion-label>Tertiary</ion-label>
+    </ion-chip>
+    <ion-chip color="success">
+      <ion-label>Success</ion-label>
+    </ion-chip>
+    <ion-chip color="warning">
+      <ion-label>Warning</ion-label>
+    </ion-chip>
+    <ion-chip color="danger">
+      <ion-label>Danger</ion-label>
+    </ion-chip>
+  </p>
+
+  <ion-list-header>Outline</ion-list-header>
+  <p>
+    <ion-chip outline color="primary">
+      <ion-label>Primary</ion-label>
+    </ion-chip>
+    <ion-chip outline color="secondary">
+      <ion-label>Secondary</ion-label>
+    </ion-chip>
+    <ion-chip outline color="tertiary">
+      <ion-label>Tertiary</ion-label>
+    </ion-chip>
+    <ion-chip outline color="success">
+      <ion-label>Success</ion-label>
+    </ion-chip>
+    <ion-chip outline color="warning">
+      <ion-label>Warning</ion-label>
+    </ion-chip>
+    <ion-chip outline color="danger">
+      <ion-label>Danger</ion-label>
+    </ion-chip>
+  </p>
+
+  <ion-list-header>Icons</ion-list-header>
+  <p>
+    <ion-chip outline color="primary">
+      <ion-icon name="pin"></ion-icon>
+      <ion-label>Madison</ion-label>
+      <ion-icon name="close-circle"></ion-icon>
+    </ion-chip>
+    <ion-chip outline color="secondary">
+      <ion-icon name="wine"></ion-icon>
+      <ion-label>Nightlife</ion-label>
+      <ion-icon name="close-circle"></ion-icon>
+    </ion-chip>
+    <ion-chip outline color="tertiary">
+      <ion-icon name="restaurant"></ion-icon>
+      <ion-label>Dining</ion-label>
+      <ion-icon name="close-circle"></ion-icon>
+    </ion-chip>
+    <ion-chip outline color="dark">
+      <ion-icon name="videocam"></ion-icon>
+      <ion-label>Entertainment</ion-label>
+      <ion-icon name="close-circle"></ion-icon>
+    </ion-chip>
+  </p>
+
+
+
+  <br />
+  <ion-title>Date Time</ion-title>
+  <br /> 
+  <ion-item>
+    <ion-label>MMMM</ion-label>
+    <ion-datetime displayFormat="MMMM" value="2012-12-15T13:47:20.789"></ion-datetime>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>MM DD YY</ion-label>
+    <ion-datetime displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Disabled</ion-label>
+    <ion-datetime id="dynamicDisabled" displayFormat="MM DD YY" disabled value="1994-12-15"></ion-datetime>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>YYYY</ion-label>
+    <ion-datetime [pickerOptions]="customPickerOptions" placeholder="Custom Options" displayFormat="YYYY" min="1981" max="2002"></ion-datetime>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="stacked">MMMM YY</ion-label>
+    <ion-datetime displayFormat="MMMM YY" min="1989-06-04" max="2004-08-23" value="1994-12-15T13:47:20.789"></ion-datetime>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">MM/DD/YYYY</ion-label>
+    <ion-datetime displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09" value="2002-09-23T15:03:46.789"></ion-datetime>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">MM/DD/YYYY</ion-label>
+    <ion-datetime displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09"></ion-datetime>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>DDD. MMM DD, YY (custom locale)</ion-label>
+    <ion-datetime value="1995-04-15" min="1990-02" max="2000"
+      [dayShortNames]="customDayShortNames"
+      displayFormat="DDD. MMM DD, YY"
+      monthShortNames="jan, feb, mar, apr, mai, jun, jul, aug, sep, okt, nov, des"></ion-datetime>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>D MMM YYYY H:mm</ion-label>
+    <ion-datetime displayFormat="D MMM YYYY H:mm" min="1997" max="2010" value="2005-06-17T11:06Z"></ion-datetime>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>DDDD MMM D, YYYY</ion-label>
+    <ion-datetime displayFormat="DDDD MMM D, YYYY" min="2005" max="2016" value="2008-09-02"></ion-datetime>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>HH:mm</ion-label>
+    <ion-datetime displayFormat="HH:mm"></ion-datetime>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>h:mm a</ion-label>
+    <ion-datetime displayFormat="h:mm a"></ion-datetime>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>hh:mm A (15 min steps)</ion-label>
+    <ion-datetime displayFormat="h:mm A" minuteValues="0,15,30,45"></ion-datetime>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Leap years, summer months</ion-label>
+    <ion-datetime displayFormat="MM/YYYY" pickerFormat="MMMM YYYY" monthValues="6,7,8" [yearValues]="customYearValues"></ion-datetime>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Specific days/months/years</ion-label>
+    <ion-datetime monthValues="6,7,8" yearValues="2014,2015" dayValues="01,02,03,04,05,06,08,09,10, 11, 12, 13, 14" displayFormat="DD/MMM/YYYY"></ion-datetime>
+  </ion-item>  
+
+
+  <br />
+  <ion-title>Date Time</ion-title>
+  <br /> 
+
+ <!-- fab placed to the top end -->
+<!--  <ion-fab vertical="top" horizontal="end" slot="fixed">
+  <ion-fab-button>
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab> -->
+
+<!-- fab placed to the bottom end -->
+<!-- <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button>
+    <ion-icon name="arrow-forward-circle"></ion-icon>
+  </ion-fab-button>
+</ion-fab> -->
+
+<!-- fab placed to the top start -->
+<!-- <ion-fab vertical="top" horizontal="start" slot="fixed">
+  <ion-fab-button>
+    <ion-icon name="arrow-back-circle"></ion-icon>
+  </ion-fab-button>
+</ion-fab> -->
+
+<!-- fab placed to the bottom start -->
+<!-- <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+  <ion-fab-button>
+    <ion-icon name="arrow-up-circle"></ion-icon>
+  </ion-fab-button>
+</ion-fab> -->
+
+<!-- fab placed to the (vertical) center and start -->
+<!-- <ion-fab vertical="center" horizontal="start" slot="fixed">
+  <ion-fab-button>
+    <ion-icon name="share"></ion-icon>
+  </ion-fab-button>
+</ion-fab> -->
+
+<!-- fab placed to the (vertical) center and end -->
+<!-- <ion-fab vertical="center" horizontal="end" slot="fixed">
+  <ion-fab-button>
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab> -->
+
+<!-- fab placed to the top and end and on the top edge of the content overlapping header -->
+<!-- <ion-fab vertical="top" horizontal="end" edge slot="fixed">
+  <ion-fab-button>
+    <ion-icon name="person"></ion-icon>
+  </ion-fab-button>
+</ion-fab> -->
+
+<!-- fab placed to the bottom and start and on the bottom edge of the content overlapping footer with a list to the right -->
+<ion-fab vertical="top" horizontal="center" edge slot="fixed">
+  <ion-fab-button>
+    <ion-icon name="settings"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side="end">
+    <ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
+  </ion-fab-list>
+</ion-fab>
+
+<!-- fab placed in the center of the content with a list on each side -->
+<ion-fab vertical="center" horizontal="center" slot="fixed">
+  <ion-fab-button>
+    <ion-icon name="share"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side="top">
+    <ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
+  </ion-fab-list>
+  <ion-fab-list side="bottom">
+    <ion-fab-button><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+  </ion-fab-list>
+  <ion-fab-list side="start">
+    <ion-fab-button><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
+  </ion-fab-list>
+  <ion-fab-list side="end">
+    <ion-fab-button><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
+  </ion-fab-list>
+</ion-fab>  
+
+</ion-content> 

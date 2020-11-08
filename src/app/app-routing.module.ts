@@ -43,6 +43,10 @@ const routes: Routes = [
     path: 'header-hidder',
     loadChildren: () => import('./pages/header-hidder/header-hidder.module').then( m => m.HeaderHidderPageModule)
   },
+  {
+    path: 'html-itens',
+    loadChildren: () => import('./pages/html-itens/html-itens.module').then( m => m.HtmlItensPageModule)
+  },
 
 ];
 
