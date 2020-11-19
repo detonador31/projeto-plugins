@@ -18,6 +18,9 @@ cd\ionic-proj\projeto-plugins\recompilar\scripts
 CALL cap_copy.bat
 
 cd\ionic-proj\projeto-plugins\recompilar\scripts
+CALL copy_firebase_api_key.bat
+
+cd\ionic-proj\projeto-plugins\recompilar\scripts
 CALL cap_open_android.bat
 
 echo Projeto recompilado

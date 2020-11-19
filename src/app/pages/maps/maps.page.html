@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>maps</ion-title>
+    <ion-item>
+      <ion-label>Definir Origem?</ion-label>
+      <ion-toggle (ionChange)="locationPointTypeChanged($event)"></ion-toggle>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- primeira versão -->
+    <!--   <div #map id="map"></div> -->
+
+  <!-- terceira versão -->
+  <ion-list>
+    <ion-item *ngIf="locationPoint === 'fixo'">
+      <ion-label>De Onde?</ion-label>
+      <ion-input type="text" [(ngModel)]="originPosition"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Para Onde?</ion-label>
+      <ion-input type="text" [(ngModel)]="destinationPosition"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+    <ion-button size="medium" (click)="calculateRoute()">Traçar rota</ion-button>
+  </div>
+
+  <!-- Segunda versão -->
+
+    <ion-button class="button-menu"  size="medium" expand="block" (click)="startTracking()" *ngIf="!isTracking">
+      <ion-icon name="move-outline"></ion-icon>
+      &nbsp;Iniciar Rastreamento
+    </ion-button>
+
+    <ion-button class="button-menu" size="medium" expand="block" (click)="stopTracking()" *ngIf="isTracking">
+      <ion-icon name="stop-circle-outline"></ion-icon>
+      &nbsp;Parar Rastreamento
+    </ion-button>
+
+  <div #map id="map"></div>
+  <ion-list>
+    <ion-list-header>Últimas Rotas</ion-list-header>
+    <ion-item *ngFor="let route of previousTracks">
+      {{ route.finished | date: "dd/MM/yyyy HH:mm" }}, {{ route.path.length }} Waypoints &nbsp;&nbsp;&nbsp;
+      <ion-button  (click)="showHistoryRoute(route.path)">
+          Visualizar Rota
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

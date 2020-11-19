@@ -34,6 +34,7 @@ registerLocaleData(localePt, 'pt');
 import 'chartjs-plugin-zoom';
 import { HideHeaderDirective } from './directives/hide-header.directive';
 import { FadeHeaderDirective } from './directives/fade-header.directive';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 // ngx-mask
 
@@ -61,7 +62,8 @@ import { FadeHeaderDirective } from './directives/fade-header.directive';
     DatePipe,
     CurrencyPipe,
     PercentPipe,
-    BrMaskerModule
+    BrMaskerModule,
+    Geolocation
   ],
   bootstrap: [AppComponent]
 })

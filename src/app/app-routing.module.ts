@@ -46,7 +46,11 @@ const routes: Routes = [
   {
     path: 'html-itens',
     loadChildren: () => import('./pages/html-itens/html-itens.module').then( m => m.HtmlItensPageModule)
+  },  {
+    path: 'maps',
+    loadChildren: () => import('./pages/maps/maps.module').then( m => m.MapsPageModule)
   },
+
 
 ];
 

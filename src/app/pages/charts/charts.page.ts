@@ -44,7 +44,7 @@ export class ChartsPage implements OnInit {
     {
         tipo: 'scatter',
         descri  : 'Linhas Básicas',
-    },    
+    },
   ];
 
 
@@ -70,7 +70,7 @@ export class ChartsPage implements OnInit {
       borderColor: '#000000',
       backgroundColor: '#ff00ff'
     }
-  ];  
+  ];
 
   // Data
   chart2Data: ChartDataSets[] = [{ data: [], label: 'Stock price' }];
@@ -116,8 +116,7 @@ export class ChartsPage implements OnInit {
     private navCtr: NavController
     ) {
     }
-    
-    
+
   async ngOnInit() {
     await this.carregaChart2();
     // this.getData(this.stock);
@@ -144,7 +143,7 @@ export class ChartsPage implements OnInit {
 
     this.chart2Labels = [];
     this.chart2Data[0].data = [];
-    
+
     this.chart2Labels  = ['January', 'February', 'March', 'April'];
     this.chart2Data[0].data = [50, 35, 30, 40];
   }
