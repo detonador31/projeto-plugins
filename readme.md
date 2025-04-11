@@ -24,14 +24,14 @@ Abaixo estão os plugins mais relevantes usados no `app.module.ts`:
 - [`@ionic-native/ionic-webview`](https://ionicframework.com/docs/native/ionic-webview)
 - [`@ionic-native/file-path`](https://ionicframework.com/docs/native/file-path)
 
-> Permitem tirar fotos, manipular arquivos e visualizar mídias de forma segura no app.
+Permitem tirar fotos, manipular arquivos e visualizar mídias de forma segura no app.
 
 ---
 
 ### 📍 Geolocalização
 - [`@ionic-native/geolocation`](https://ionicframework.com/docs/native/geolocation)
 
-> Usado para obter localização do usuário com GPS, útil para mapas, check-ins e rastreamento.
+Usado para obter localização do usuário com GPS, útil para mapas, check-ins e rastreamento.
 
 ---
 
@@ -40,14 +40,14 @@ Abaixo estão os plugins mais relevantes usados no `app.module.ts`:
 - [`@ionic-native/sqlite`](https://ionicframework.com/docs/native/sqlite)
 - [`@ionic-native/sqlite-porter`](https://ionicframework.com/docs/native/sqlite-porter)
 
-> Suporte a banco de dados local usando SQLite, além de armazenamento simples com chave-valor.
+Suporte a banco de dados local usando SQLite, além de armazenamento simples com chave-valor.
 
 ---
 
 ### 💸 Máscaras e Formatação de Dados
 - [`br-mask`](https://www.npmjs.com/package/br-mask)
 
-> Biblioteca para aplicar máscaras em inputs, como valores monetários, CPF, CNPJ, etc.
+Biblioteca para aplicar máscaras em inputs, como valores monetários, CPF, CNPJ, etc.
 
 - Pipes nativos do Angular para:
   - Data (`DatePipe`)
@@ -62,7 +62,7 @@ Abaixo estão os plugins mais relevantes usados no `app.module.ts`:
   - `HideHeaderDirective`
   - `FadeHeaderDirective`
 
-> Adicionam efeitos de scroll e interação à interface, além de suporte a gráficos interativos.
+Adicionam efeitos de scroll e interação à interface, além de suporte a gráficos interativos.
 
 ---
 
