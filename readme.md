@@ -6,15 +6,13 @@ Este repositório contém um projeto em **Ionic 5 com Angular**, demonstrando o 
 
 ## ✨ Tecnologias principais
 
-- **Ionic Framework** v5
-- **Angular**
-- **Capacitor + Cordova Plugins**
-- **Ionic Native**
-- **SQLite + SQLite Porter**
-- **Ionic Storage**
-- **Máscaras de valores monetários (R$)**
-
----
+- **⚡️ Ionic Framework v5**
+- **🅰️ Angular**
+- **🔌 Capacitor + Cordova Plugins**
+- **📦 Ionic Native**
+- **🗄 SQLite + SQLite Porter**
+- **💾 Ionic Storage**
+- **💰 Máscaras de valores monetários (R$)**
 
 ## 🔌 Plugins e bibliotecas utilizadas
 
